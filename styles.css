@@ -3,20 +3,14 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #ca390d;
   background-image: url('https://img.freepik.com/vector-gratis/fondo-dia-mundial-libro-dibujado-mano_23-2149334623.jpg?semt=ais_hybrid'); 
 }
 header {
-  background-color: grey;
+  background-color: #344152;
   color: #fff;
   text-align: center;
   padding: 1rem;
-}
-
-main {
-  color: white
-  font-weight: bolder;
-    text-align: center;
 }
 
 nav ul {
@@ -29,7 +23,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -40,11 +34,11 @@ main {
 }
 
 .ejercicio {
-  background-color: #e467b4;
+  background-color: #44394b;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 input, select, button, textarea {
@@ -53,7 +47,7 @@ input, select, button, textarea {
 }
 
 button {
-  background-color: #e100ff;
+  background-color: #000000;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -61,14 +55,14 @@ button {
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #303c5a;
 }
 
 footer {
   text-align: center;
   padding: 10px;
-  background-color: grey;
-  color: #fff;
+  background-color: #6b6d64;
+  color: #1b0b0b;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -83,9 +77,9 @@ footer {
   flex: 1;
   margin: 10px;
   padding: 15px;
-  background-color: #e467b4;
+  background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 form {
