@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  background-image: url('https://img.freepik.com/vector-gratis/fondo-dia-mundial-libro-dibujado-mano_23-2149334623.jpg?semt=ais_hybrid'); 
+}
+header {
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  color: white
+  font-weight: bolder;
+    text-align: center;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.ejercicio {
+  background-color: #e467b4;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, select, button, textarea {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+button {
+  background-color: #e100ff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: grey;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.niveles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nivel {
+  flex: 1;
+  margin: 10px;
+  padding: 15px;
+  background-color: #e467b4;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input, form textarea {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+form button {
+  align-self: flex-start;
+}

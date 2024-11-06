@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Secundaria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ejercicios de Secundaria</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="primaria.html">Primaria</a></li>
+                <li><a href="secundaria.html">Secundaria</a></li>
+                <li><a href="universidad.html">Universidad</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="ejercicio">
+            <h2>1. Suma de Números Naturales</h2>
+            <p>Ingresa un número para sumar todos los números naturales hasta ese número:</p>
+            <input type="number" id="suma-naturales" min="1">
+            <button onclick="calcularSumaNaturales()">Calcular</button>
+            <p id="resultado-suma"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>2. Factorial de un Número</h2>
+            <p>Ingresa un número para calcular su factorial:</p>
+            <input type="number" id="factorial" min="0">
+            <button onclick="calcularFactorial()">Calcular</button>
+            <p id="resultado-factorial"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>3. Números Pares e Impares</h2>
+            <p>Ingresa dos números para mostrar los pares e impares en ese rango:</p>
+            <input type="number" id="inicio" placeholder="Inicio">
+            <input type="number" id="fin" placeholder="Fin">
+            <button onclick="mostrarParesImpares()">Mostrar</button>
+            <p id="resultado-pares-impares"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>4. Tabla de Multiplicar</h2>
+            <p>Ingresa un número para ver su tabla de multiplicar:</p>
+            <input type="number" id="tabla">
+            <button onclick="mostrarTabla()">Mostrar</button>
+            <p id="resultado-tabla"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>5. Secuencia de Fibonacci</h2>
+            <p>Ingresa un número para generar esa cantidad de números de Fibonacci:</p>
+            <input type="number" id="fibonacci" min="1">
+            <button onclick="generarFibonacci()">Generar</button>
+            <p id="resultado-fibonacci"></p>
+        </section>
+    </main><br><br><br>
+    <footer>
+        <p>&copy; 2024 Página Educativa</p>
+    </footer>
+
+    <script>
+        function calcularSumaNaturales() {
+            var n = parseInt(document.getElementById('suma-naturales').value);
+            var suma = 0;
+            for (var i = 1; i <= n; i++) {
+                suma += i;
+            }
+            document.getElementById('resultado-suma').textContent = 'La suma es: ' + suma;
+        }
+
+        function calcularFactorial() {
+            var n = parseInt(document.getElementById('factorial').value);
+            var factorial = 1;
+            for (var i = 2; i <= n; i++) {
+                factorial *= i;
+            }
+            document.getElementById('resultado-factorial').textContent = 'El factorial es: ' + factorial;
+        }
+
+        function mostrarParesImpares() {
+            var inicio = parseInt(document.getElementById('inicio').value);
+            var fin = parseInt(document.getElementById('fin').value);
+            var pares = [], impares = [];
+            for (var i = inicio; i <= fin; i++) {
+                if (i % 2 === 0) {
+                    pares.push(i);
+                } else {
+                    impares.push(i);
+                }
+            }
+            document.getElementById('resultado-pares-impares').textContent = 
+                'Pares: ' + pares.join(', ') + '\nImpares: ' + impares.join(', ');
+        }
+
+        function mostrarTabla() {
+            var n = parseInt(document.getElementById('tabla').value);
+            var tabla = '';
+            for (var i = 1; i <= 10; i++) {
+                tabla += n + ' x ' + i + ' = ' + (n * i) + '\n';
+            }
+            document.getElementById('resultado-tabla').textContent = tabla;
+        }
+
+        function generarFibonacci() {
+            var n = parseInt(document.getElementById('fibonacci').value);
+            var fib = [0, 1];
+            for (var i = 2; i < n; i++) {
+                fib[i] = fib[i-1] + fib[i-2];
+            }
+            document.getElementById('resultado-fibonacci').textContent = 
+                'Secuencia de Fibonacci: ' + fib.slice(0, n).join(', ');
+        }
+    </script>
+</body>
+</html>

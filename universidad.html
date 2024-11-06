@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Universidad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ejercicios de Universidad</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="primaria.html">Primaria</a></li>
+                <li><a href="secundaria.html">Secundaria</a></li>
+                <li><a href="universidad.html">Universidad</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="ejercicio">
+            <h2>1. Calculadora Interactiva</h2>
+            <input type="number" id="num1" placeholder="Número 1">
+            <select id="operacion">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="number" id="num2" placeholder="Número 2">
+            <button onclick="calcular()">Calcular</button>
+            <p id="resultado-calculadora"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>2. Conversión de Números</h2>
+            <input type="text" id="numero-conversion" placeholder="Ingrese un número">
+            <select id="tipo-conversion">
+                <option value="binario-a-decimal">Binario a Decimal</option>
+                <option value="decimal-a-binario">Decimal a Binario</option>
+                <option value="binario-a-hexadecimal">Binario a Hexadecimal</option>
+                <option value="hexadecimal-a-binario">Hexadecimal a Binario</option>
+            </select>
+            <button onclick="convertirNumero()">Convertir</button>
+            <p id="resultado-conversion"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>3. Análisis de Texto</h2>
+            <textarea id="texto-analisis" rows="4" placeholder="Ingrese un texto para analizar"></textarea>
+            <button onclick="analizarTexto()">Analizar</button>
+            <p id="resultado-analisis"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>4. Invertir Texto</h2>
+            <input type="text" id="texto-invertir" placeholder="Ingrese un texto para invertir">
+            <button onclick="invertirTexto()">Invertir</button>
+            <p id="resultado-invertir"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>5. Comparar Longitud de Frases</h2>
+            <input type="text" id="frase1" placeholder="Frase 1">
+            <input type="text" id="frase2" placeholder="Frase 2">
+            <button onclick="compararFrases()">Comparar</button>
+            <p id="resultado-comparar"></p>
+        </section>
+    </main><br><br>
+    <footer>
+        <p>&copy; 2024 Página Educativa</p>
+    </footer>
+
+    <script>
+        function calcular() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var operacion = document.getElementById('operacion').value;
+            var resultado;
+
+            switch(operacion) {
+                case '+': resultado = num1 + num2; break;
+                case '-': resultado = num1 - num2; break;
+                case '*': resultado = num1 * num2; break;
+                case '/': resultado = num1 / num2; break;
+            }
+
+            document.getElementById('resultado-calculadora').textContent = 'Resultado: ' + resultado;
+        }
+
+        function convertirNumero() {
+            var numero = document.getElementById('numero-conversion').value;
+            var tipo = document.getElementById('tipo-conversion').value;
+            var resultado;
+
+            switch(tipo) {
+                case 'binario-a-decimal':
+                    resultado = parseInt(numero, 2);
+                    break;
+                case 'decimal-a-binario':
+                    resultado = parseInt(numero).toString(2);
+                    break;
+                case 'binario-a-hexadecimal':
+                    resultado = parseInt(numero, 2).toString(16).toUpperCase();
+                    break;
+                case 'hexadecimal-a-binario':
+                    resultado = parseInt(numero, 16).toString(2);
+                    break;
+            }
+
+            document.getElementById('resultado-conversion').textContent = 'Resultado: ' + resultado;
+        }
+
+        function analizarTexto() {
+            var texto = document.getElementById('texto-analisis').value;
+            var caracteres = texto.length;
+            var palabras = texto.trim().split(/\s+/).length;
+            var vocales = (texto.match(/[aeiouáéíóú]/gi) || []).length;
+            var digitos = (texto.match(/\d/g) || []).length;
+            var espacios = (texto.match(/\s/g) || []).length;
+
+            document.getElementById('resultado-analisis').textContent = 
+                'Caracteres: ' + caracteres + ', Palabras: ' + palabras + ', Vocales: ' + vocales + 
+                ', Dígitos: ' + digitos + ', Espacios: ' + espacios;
+        }
+
+        function invertirTexto() {
+            var texto = document.getElementById('texto-invertir').value;
+            var invertido = texto.split('').reverse().join('');
+            document.getElementById('resultado-invertir').textContent = 'Texto invertido: ' + invertido;
+        }
+
+        function compararFrases() {
+            var frase1 = document.getElementById('frase1').value;
+            var frase2 = document.getElementById('frase2').value;
+            var palabras1 = frase1.trim().split(/\s+/).length;
+            var palabras2 = frase2.trim().split(/\s+/).length;
+
+            var resultado;
+            if (palabras1 > palabras2) {
+                resultado = 'La frase 1 tiene más palabras (' + palabras1 + ' vs ' + palabras2 + ')';
+            } else if (palabras2 > palabras1) {
+                resultado = 'La frase 2 tiene más palabras (' + palabras2 + ' vs ' + palabras1 + ')';
+            } else {
+                resultado = 'Ambas frases tienen la misma cantidad de palabras (' + palabras1 + ')';
+            }
+
+            document.getElementById('resultado-comparar').textContent = resultado;
+        }
+    </script>
+</body>
+</html>

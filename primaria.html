@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Primaria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ejercicios de Primaria</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="primaria.html">Primaria</a></li>
+                <li><a href="secundaria.html">Secundaria</a></li>
+                <li><a href="universidad.html">Universidad</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="ejercicio">
+            <h2>1. Completar secuencia numérica</h2>
+            <p>¿Qué número sigue en la secuencia 10, 20, 30, ...?</p>
+            <input type="number" id="secuencia">
+            <button onclick="verificar('secuencia', 40)">Verificar</button>
+            <p id="resultado-secuencia"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>2. Identificar patrón</h2>
+            <p>¿Cuál es el siguiente número en la secuencia 2, 4, 8, 16, ...?</p>
+            <input type="number" id="patron">
+            <button onclick="verificar('patron', 32)">Verificar</button>
+            <p id="resultado-patron"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>3. Comparación de edades</h2>
+            <p>¿Quién es mayor, Juan de 12 años o María de 14 años?</p>
+            <select id="edades">
+                <option value="">Elige</option>
+                <option value="juan">Juan</option>
+                <option value="maria">María</option>
+            </select>
+            <button onclick="verificarTexto('edades', 'maria')">Verificar</button>
+            <p id="resultado-edades"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>4. Comparación de superficies</h2>
+            <p>¿Qué tiene más superficie, una mesa de 1 m² o una alfombra de 2 m²?</p>
+            <select id="superficies">
+                <option value="">Elige</option>
+                <option value="mesa">Mesa</option>
+                <option value="alfombra">Alfombra</option>
+            </select>
+            <button onclick="verificarTexto('superficies', 'alfombra')">Verificar</button>
+            <p id="resultado-superficies"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>5. Comparación de volúmenes</h2>
+            <p>¿Qué recipiente puede contener más líquido, un vaso de 250 ml o una botella de 1 litro?</p>
+            <select id="volumenes">
+                <option value="">Elige</option>
+                <option value="vaso">Vaso</option>
+                <option value="botella">Botella</option>
+            </select>
+            <button onclick="verificarTexto('volumenes', 'botella')">Verificar</button>
+            <p id="resultado-volumenes"></p>
+        </section>
+    </main><br><br><br>
+    <footer>
+        <p>&copy; 2024 Página Educativa</p>
+    </footer>
+
+    <script>
+        function verificar(id, respuestaCorrecta) {
+            var respuesta = document.getElementById(id).value;
+            var resultado = document.getElementById('resultado-' + id);
+            if (parseInt(respuesta) === respuestaCorrecta) {
+                resultado.textContent = '¡Correcto!';
+                resultado.style.color = 'green';
+            } else {
+                resultado.textContent = 'Incorrecto. Intenta de nuevo.';
+                resultado.style.color = 'red';
+            }
+        }
+
+        function verificarTexto(id, respuestaCorrecta) {
+            var respuesta = document.getElementById(id).value;
+            var resultado = document.getElementById('resultado-' + id);
+            if (respuesta === respuestaCorrecta) {
+                resultado.textContent = '¡Correcto!';
+                resultado.style.color = 'green';
+            } else {
+                resultado.textContent = 'Incorrecto. Intenta de nuevo.';
+                resultado.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
