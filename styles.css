@@ -3,21 +3,14 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #000000;
   background-image: url('https://img.freepik.com/vector-gratis/fondo-dia-mundial-libro-dibujado-mano_23-2149334623.jpg?semt=ais_hybrid'); 
 }
 header {
-  background-color: rgb(73, 73, 73);
-  color: #fff;
+  background-color: #0d59cacb;
+  color: #ffffff;
   text-align: center;
   padding: 1rem;
-}
-
-main {
-  color: black;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bolder;
-  text-align: center;
 }
 
 nav ul {
@@ -30,7 +23,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -41,11 +34,11 @@ main {
 }
 
 .ejercicio {
-  background-color: #5150a1;
+  background-color: #eff2f7;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 input, select, button, textarea {
@@ -54,7 +47,7 @@ input, select, button, textarea {
 }
 
 button {
-  background-color: #e100ff;
+  background-color: #000000;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -62,14 +55,15 @@ button {
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #3f4450;
 }
 
 footer {
   text-align: center;
   padding: 10px;
-  background-color: rgb(73, 73, 73);
-  color: #fff;
+  background-color: #0d59cacb;
+  color: white;
+  font-weight: bold;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -84,9 +78,10 @@ footer {
   flex: 1;
   margin: 10px;
   padding: 15px;
-  background-color: #5150a1;
+  background-color: #eff2f7;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 form {
@@ -105,4 +100,23 @@ form input, form textarea {
 
 form button {
   align-self: flex-start;
+}
+section {
+  margin-bottom: 20px;
+  padding: 15px;      
+  background-color: #eff2f7;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-bottom: 10px;
+}
+.bienvenida {
+  background-color: #eff2f7;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
